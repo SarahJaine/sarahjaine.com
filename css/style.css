@@ -2,21 +2,24 @@ body {
 	background-color: #D8DCCF;
 	background-color: #F7F7F2;
 	color:#143E51;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 200%;
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2.5em;
 	font-family: 'Dancing Script', cursive;
 	font-weight: bold;
 }
 
 h2 {
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 p {
+	font-family: Helvetica, sans-serif;
 	font-size: .9em;
+	font-weight: lighter;
 }
 
 a:link {
@@ -49,6 +52,7 @@ i {
 #tagline {
 	color:#E01A4F;
 	padding-top: .25em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 1em;
 }
 
@@ -75,15 +79,14 @@ i.glyphicon-envelope {
 }
 
 .bg-image {
-	background-image: url('../images/lookup_edit2.png');
+	background-image: url('../images/lookup_edit4.png');
 	background-position: center center;
 	background-size: cover;
-	filter: alpha(opacity=40); /* For IE8 and earlier */
 	min-height: 100vh;
 }
 
 .bg-image a {
-	color:#E01A4F;
+	color:#167F74;
 }
 
 .bg-image a:hover {
@@ -91,8 +94,8 @@ i.glyphicon-envelope {
 }
 
 #about-content {
-	padding-top: calc(100vh *.07);
-	padding-bottom: calc(100vh *.07);
+	padding-top: calc(100vh *.08);
+	padding-bottom: calc(100vh *.08);
 }
 
 .nav-link-final {
