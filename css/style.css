@@ -40,7 +40,7 @@ i {
 	padding: .25em;
 }
 
-#home-content {
+#home {
 	padding-top: 5vh;
 	text-align: center;
 	display: flex;
@@ -72,10 +72,11 @@ i.glyphicon-envelope {
 	height: 40vh;
 }
 
-#project-content {
+#project {
 	padding-top: 2vh;
 	min-height: 65vh;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .bg-image {
@@ -93,7 +94,7 @@ i.glyphicon-envelope {
 	text-decoration: underline;
 }
 
-#about-content {
+#about {
 	padding-top: calc(100vh *.08);
 	padding-bottom: calc(100vh *.08);
 }
