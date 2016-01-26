@@ -80,7 +80,7 @@ i.glyphicon-envelope {
 }
 
 .bg-image {
-	background-image: url('/images/Lookup_bg.png');
+	background-image: url('http://sarahjaine.com/images/Lookup_bg.png');
 	background-position: center center;
 	background-size: cover;
 	min-height: 100vh;
