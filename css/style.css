@@ -46,7 +46,7 @@ i {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	height: 65vh;
+	height: 60vh;
 }
 
 #tagline {
@@ -69,12 +69,12 @@ i.glyphicon-envelope {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	height: 35vh;
+	height: 40vh;
 }
 
 #project {
 	padding-top: 2vh;
-	min-height: 65vh;
+	min-height: 60vh;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
