@@ -22,6 +22,10 @@ p {
 	font-weight: lighter;
 }
 
+strong {
+	font-weight: 400;
+}
+
 a:link {
 	color:#143E51;
 }
@@ -91,7 +95,7 @@ i.glyphicon-envelope {
 }
 
 .bg-image a:hover {
-	text-decoration: underline;
+	opacity: .5;
 }
 
 #about {
