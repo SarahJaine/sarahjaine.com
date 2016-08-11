@@ -1,39 +1,56 @@
+:root {
+	/*colors*/
+	/*magnolia*/
+	--main-bg-color: #F8F1FF;
+	/*middle red purple*/
+	--main-color:  #380036;
+	/*jungle green*/
+	--link-color: #1B998B;
+	/*portland orange*/
+	--tagline-color: #F46036;
+	/*bangladesh green*/
+	--hover-color: #105E55;
+
+	/*typography*/
+	--size-h1: 4rem;
+	--size-h2: 3rem;
+	--size-tagline: 2.8rem;
+	--size-main: 2rem;
+}
+
 body {
-	background-color: #D8DCCF;
-	background-color: #F7F7F2;
-	color:#143E51;
+	background-color: var(--main-bg-color);
+	color: var(--main-color);
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 200%;
+	font-size: var(--size-main);
 }
 
 h1 {
-	font-size: 2.5em;
-	font-family: 'Dancing Script', cursive;
-	font-weight: bold;
+	font-size: var(--size-h1);
+	font-family: 'Signika', sans-serif;
 }
 
 h2 {
-	font-size: 1.3em;
+	font-size: var(--size-h2);
 }
 
 p {
 	font-family: Helvetica, sans-serif;
-	font-size: .9em;
 	font-weight: lighter;
 }
 
-a:link {
-	color:#143E51;
+strong {
+	font-weight: 400;
 }
 
-a:visited {
+a:link, a:visited {
 	text-decoration: none;
-	color:#143E51;
+	color: var(--link-color)
 }
 
 a:hover {
 	text-decoration: none;
-	color:#1B998B;
+	color: var(--hover-color);
 }
 
 i {
@@ -50,18 +67,14 @@ i {
 }
 
 #tagline {
-	color:#E01A4F;
+	color: var(--tagline-color);
 	padding-top: .25em;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 1em;
+	font-size: var(--size-tagline);
 }
 
 #contact-tray {
 	padding-top: .5em;
-}
-
-i.glyphicon-envelope {
-    font-size: 1.5em;
 }
 
 .nav-link {
@@ -72,6 +85,10 @@ i.glyphicon-envelope {
 	height: 40vh;
 }
 
+.fa-chevron-down, .fa-chevron-up {
+	color: var(--main-color);
+}
+
 #project {
 	padding-top: 2vh;
 	min-height: 60vh;
@@ -79,19 +96,15 @@ i.glyphicon-envelope {
 	overflow-x: hidden;
 }
 
+.center {
+	text-align: center;
+}
+
 .bg-image {
 	background-image: url('http://sarahjaine.com/images/Lookup_bg.png');
 	background-position: center center;
 	background-size: cover;
 	min-height: 90vh;
-}
-
-.bg-image a {
-	color:#167F74;
-}
-
-.bg-image a:hover {
-	text-decoration: underline;
 }
 
 #about {
