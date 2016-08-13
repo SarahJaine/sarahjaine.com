@@ -1,2 +1,0 @@
-# sarahjaine.com
-portfolio website

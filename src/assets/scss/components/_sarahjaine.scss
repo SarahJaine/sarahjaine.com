@@ -1,3 +1,7 @@
+
+// reference only!
+
+
 :root {
 	/*colors*/
 	/*magnolia*/
@@ -101,7 +105,7 @@ i {
 }
 
 .bg-image {
-	background-image: url('http://sarahjaine.com/images/Lookup_bg.png');
+	background-image: url('{{root}}assets/img/Lookup_bg.png');
 	background-position: center center;
 	background-size: cover;
 	min-height: 90vh;

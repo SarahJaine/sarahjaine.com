@@ -1,0 +1,51 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hello, I'm Sarah-Jaine Szekeresh. I am a web developer living in Washington DC and these are some of my projects.">
+
+    <!-- Facebook open graph -->
+    <meta property="og:title" content="Sarah-Jaine Szekeresh's Portfolio">
+    <meta property="og:site_name" content="sarahjaine.com">
+    <meta property="og:url" content="http://sarahjaine.com/">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="523707504468926">
+    <meta property="og:description" content="Hello. I am a web developer living in Washington DC and these are some of my projects.">
+    <meta property="og:image" content="{{root}}assets/img/Lookup_sm.png">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@sarahjaine_sz">
+    <meta name="twitter:creator" content="@sarahjaine_sz">
+    <meta name="twitter:title" content="Sarah-Jaine Szekeresh's Portfolio">
+    <meta name="twitter:description" content="Hello. I am a web developer living in Washington DC and these are some of my projects.">
+    <meta name="twitter:image:src" content="{{root}}assets/img/Lookup_sm.png">
+
+    <!-- Google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-72527745-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <script src="https://use.fontawesome.com/998d0f8dda.js"></script>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+
+    <title>Sarah-Jaine Szekeresh</title>
+</head>
+    <body>
+        {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+        {{> body}}
+
+        <script src="{{root}}assets/js/app.js"></script>
+    </body>
+</html>
