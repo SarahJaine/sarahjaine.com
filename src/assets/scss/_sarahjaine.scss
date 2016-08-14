@@ -39,7 +39,6 @@ p {
 	}
 }
 
-
 // Hero
 
 #home {
@@ -69,6 +68,10 @@ p {
 	min-height: 60vh;
 	overflow-y: auto;
 	overflow-x: hidden;
+}
+
+.thumbnail {
+	background-color: $white;
 }
 
 .caption {
