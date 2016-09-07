@@ -1,0 +1,37 @@
+.hero {
+	background-image: url('../img/floral_bg.png');
+	background-position: center center;
+	background-size: cover;
+	@include breakpoint(small) {
+		min-height: 320px;
+        height: 70vh;
+    }
+	@include breakpoint(large) {
+		min-height: 414px;
+        height: 60vh;
+    }
+}
+
+.featured-work {
+	background-color: $blush;
+}
+
+
+.contact {
+	height: 600px;
+	background-color: $light-blue;
+}
+
+.contact--headshot {
+	height: 600px;
+	background-image: url('../img/headshot_bw.jpg');
+	filter: opacity(100%);
+	background-position: 20px 85px;
+	background-size: 500px auto;
+	background-repeat: no-repeat;
+}
+
+.contact--contact-item {
+	padding-top: 0.8rem;
+	padding-right: 1rem;
+}

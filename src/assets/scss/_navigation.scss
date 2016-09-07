@@ -1,0 +1,44 @@
+// Header Bar
+
+.header--bar {
+	background-color: $light-blue;
+	height: 70px;
+	a {
+		color: $black;
+		padding: 0.2rem;
+		font-weight: $font-weight-bold;
+		letter-spacing: 0.1rem;
+		&:hover {
+			color: $anchor-color-hover;
+		}
+		@include breakpoint(small) {
+			margin: 0.8rem 0.3rem 0.8rem 0.3rem;
+			font-size: 0.5rem;
+		}
+		@include breakpoint(medium) {
+			margin: 0.7rem;
+			font-size: 0.8rem;
+		}
+	}
+}
+
+.header--bar-inner {
+	@extend .header--bar;
+	background-image: url('../img/floral_bg.png');
+	background-position: center center;
+	background-size: cover;
+	a {
+		background-color: $white;
+	}
+}
+
+// Footer Bar
+
+.footer--bar-inner {
+	@extend .header--bar;
+}
+
+.footer--contact-icon {
+	padding-top: 1rem;
+	padding-right: 2rem;
+}

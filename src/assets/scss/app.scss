@@ -52,4 +52,9 @@
 
 // sarahjaine.com componenets //
 
-@import 'sarahjaine'
+@import 'base';
+@import 'typography';
+
+@import 'navigation';
+@import 'home';
+@import 'error';

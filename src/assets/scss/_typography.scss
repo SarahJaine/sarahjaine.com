@@ -1,0 +1,50 @@
+// Typography
+
+h2 {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+%heading--large,
+.heading--large {
+    font-weight: $font-weight-bold;
+    line-height: 2;
+    padding: 10px;
+}
+
+%heading--medium,
+.heading--medium {
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    color: $dark-gray;
+}
+
+%heading--sub,
+.heading--sub {
+    font-size: 1.5rem;
+    font-weight: $font-weight-medium;
+    line-height: 1;
+    font-style: italic;
+}
+
+%heading--small,
+.heading--small {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.1rem;
+}
+
+%heading--micro,
+.heading--micro {
+    font-size: 0.85rem;
+    font-weight: $font-weight-bold;
+}
+
+
+// Paragraph
+
+.text--center {
+    text-align: center;
+}

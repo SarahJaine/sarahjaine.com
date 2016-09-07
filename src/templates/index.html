@@ -1,0 +1,40 @@
+{% extends 'layouts/default.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+{% include 'partials/header_bar.html' %}
+
+<section class="hero section--middle-border">
+	<div class="block--align-center-left">
+		<h1 class="heading--large">
+			<mark class="white-highlight">&nbsp;I’m a Python web developer coding and&nbsp;
+			<br>
+			&nbsp;teaching in Washington DC.&nbsp;
+			<br>
+			&nbsp;See what I’ve been <a href="/work/">working on</a> recently.&nbsp;
+			</mark>
+		</h1>
+	</div>
+</section>
+
+{% include 'partials/featured_work.html' %}
+
+<section class="contact section--bottom-border">
+	<div class="row">
+		<div class="hide-for-small-only medium-5 columns contact--headshot">
+		</div>
+		<div class="small-12 medium-6 columns">
+			<h2>Get In Touch</h2>
+			<p>I’m a web developer living in Washington DC.  In my free time, I teach beginner friendly Python classes through Hear Me Code.  I am currently available for hire for short-term projects and full-time permanent positions.</p>
+			<ul class="fa-ul">
+				<li><i class="fa-li fa fa-envelope-square fa-lg fa-fw contact--contact-item" aria-hidden="true"></i>Send me an <a href="mailto:freelance@sarahjaine.com"target="_blank">email</a>.</li>
+				<li><i class="fa-li fa fa-twitter fa-lg fa-fw contact--contact-item"></i>Find me on <a href="https://twitter.com/SarahJaine_Sz" target="_blank">Twitter</a>.</li>
+				<li><i class="fa-li fa fa-github fa-lg fa-fw contact--contact-item"></i>Browse my <a href="https://github.com/SarahJaine" target="_blank">GitHub</a>.</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

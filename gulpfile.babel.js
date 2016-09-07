@@ -9,6 +9,9 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+// import nunjucksRender from 'gulp-nunjucks-render';
+const nunjucks = require('gulp-nunjucks-render')
+
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -47,20 +50,17 @@ function copy() {
 
 // Copy page templates into finished HTML files
 function pages() {
-  return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
-    .pipe(panini({
-      root: 'src/pages/',
-      layouts: 'src/layouts/',
-      partials: 'src/partials/',
-      data: 'src/data/',
-      helpers: 'src/helpers/'
+  return gulp.src('src/templates/**/*.html')
+    .pipe(nunjucks({
+      path: ['src/templates/'] // String or Array
     }))
-    .pipe(gulp.dest(PATHS.dist));
-}
+    // .pipe(plumber.stop())
+    .pipe(gulp.dest('dist/'));
+};
 
 // Load updated HTML templates and partials into Panini
 function resetPages(done) {
-  panini.refresh();
+  // panini.refresh();
   done();
 }
 
@@ -133,8 +133,8 @@ function reload(done) {
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
   gulp.watch(PATHS.assets, copy);
-  gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, browser.reload));
-  gulp.watch('src/{layouts,partials}/**/*.html').on('change', gulp.series(resetPages, pages, browser.reload));
+  gulp.watch('src/templates/**/*.html').on('change', gulp.series(pages, browser.reload));
+  // gulp.watch('src/{layouts,partials}/**/*.html').on('change', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss', sass);
   gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('change', gulp.series(images, browser.reload));

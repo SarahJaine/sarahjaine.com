@@ -10,6 +10,17 @@ $dark-blue: #0D1B2A;
 $black-text: #1E1E24;
 $alabaster: #EAEAEA;
 
+$light-blue: #c3e7ef;
+$red: #e9533f;
+$blush: #f4ebee;
+
+// ii. Typography
+$sans: 'Open Sans', sans-serif;
+$serif: 'Gentium Book Basic', serif;
+
+$font-weight-medium: 400;
+$font-weight-bold: 600;
+$font-weight-heavy: 700;
 
 // //  Foundation for Sites Settings
 // //  -----------------------------
@@ -59,7 +70,7 @@ $alabaster: #EAEAEA;
 // // 1. Global
 // // ---------
 
-// $global-font-size: 100%;
+$global-font-size: 120%;
 // $global-width: rem-calc(1200);
 // $global-lineheight: 1.5;
 // $foundation-palette: (
@@ -69,14 +80,14 @@ $alabaster: #EAEAEA;
 //   warning: #ffae00,
 //   alert: #ec5840,
 // );
-// $light-gray: #e6e6e6;
-// $medium-gray: #cacaca;
-// $dark-gray: #8a8a8a;
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #404040;
 // $black: #0a0a0a;
-// $white: #fefefe;
-$body-background: $blonde;
-$body-font-color: $black-text;
-$body-font-family: "Trebuchet MS", Helvetica, sans-serif;
+$white: #fefefe;
+$body-background: $white;
+$body-font-color: $dark-gray;
+$body-font-family: $serif;
 // $body-antialiased: true;
 // $global-margin: 1rem;
 // $global-padding: 1rem;
@@ -116,29 +127,29 @@ $grid-column-gutter: (
 // // 4. Base Typography
 // // ------------------
 
-$header-font-family: 'Signika', sans-serif;;
-// $header-font-weight: $global-weight-normal;
+$header-font-family: $sans;
+$header-font-weight: $font-weight-bold;
 // $header-font-style: normal;
 // $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 30,
-    'h2': 25,
-    'h3': 23,
+    'h1': 22,
+    'h2': 23,
+    'h3': 22,
     'h4': 20,
     'h5': 18,
     'h6': 16,
   ),
   medium: (
-    'h1': 48,
-    'h2': 40,
-    'h3': 31,
+    'h1': 30,
+    'h2': 28,
+    'h3': 18,
     'h4': 25,
     'h5': 20,
     'h6': 16,
   ),
 );
-$header-color: $purple;
+$header-color: $body-font-color;
 // $header-lineheight: 1.4;
 // $header-margin-bottom: 0.5rem;
 // $header-text-rendering: optimizeLegibility;
@@ -153,14 +164,14 @@ $header-color: $purple;
 // $code-background: $light-gray;
 // $code-border: 1px solid $medium-gray;
 // $code-padding: rem-calc(2 5 1);
-// $anchor-color: $primary-color;
-// $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color: $red;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -30%);
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
 // $hr-width: $global-width;
 // $hr-border: 1px solid $medium-gray;
 // $hr-margin: rem-calc(20) auto;
-// $list-lineheight: $paragraph-lineheight;
+$list-lineheight: 3;
 // $list-margin-bottom: $paragraph-margin-bottom;
 // $list-style-type: disc;
 // $list-style-position: outside;
