@@ -1,3 +1,5 @@
+// Hero Block
+
 .hero {
 	background-image: url('../img/floral_bg.png');
 	background-position: center center;
@@ -12,9 +14,13 @@
     }
 }
 
-.featured-work {
+// Featured Work Block
+
+.work {
 	background-color: $blush;
 }
+
+// Contact Block
 
 .contact {
 	height: 600px;
@@ -35,6 +41,3 @@
 	padding-right: 1rem;
 }
 
-.work-detail {
-	background-color: $blush;
-}
