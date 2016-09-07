@@ -5,11 +5,14 @@
 	height: 70px;
 	a {
 		color: $black;
-		padding: 0.2rem;
+		padding: 0.2rem 1rem 0.2rem 1rem;
 		font-weight: $font-weight-bold;
 		letter-spacing: 0.1rem;
-		&:hover {
-			color: $anchor-color-hover;
+		&:hover, &:active {
+			color: $white;
+			background-color: $red;
+			border: 1px solid $red;
+			border-radius: 1rem;
 		}
 		@include breakpoint(small) {
 			margin: 0.8rem 0.3rem 0.8rem 0.3rem;
@@ -17,7 +20,7 @@
 		}
 		@include breakpoint(medium) {
 			margin: 0.7rem;
-			font-size: 0.8rem;
+			font-size: 0.9rem;
 		}
 	}
 }

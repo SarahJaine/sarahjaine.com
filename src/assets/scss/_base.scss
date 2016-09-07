@@ -12,8 +12,8 @@
 
 .section--middle-border {
 	@extend .section--full-border;
-	border-bottom-width: 5px;
 	border-top-width: 5px;
+	border-bottom-width: 5px;
 }
 
 .section--bottom-border {
@@ -72,11 +72,30 @@
 	font-weight: $font-weight-heavy;
 	line-height: 4rem;
 	padding: 15px 40px 15px 40px;
+	&:hover {
+		color: $white;
+		background-color: $red; 
+		border-color: $white;
+		filter: drop-shadow(0px 0px 2px $medium-gray);
+	}
 }
+
 
 .global--thumbnail {
 	border: 10px solid $white;
 	filter: drop-shadow(0px 0px 2px $medium-gray);
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+}
+
+.global--circle {
+	display: inline-block;
+	width: 0.3rem;
+	height: 0.3rem;
+	background: $red;
+	-moz-border-radius: 0.2rem;
+	-webkit-border-radius: 0.2rem;
+	border-radius: 50%;
+	padding: 3px;
+	margin: 0px 10px 2px 10px;
 }

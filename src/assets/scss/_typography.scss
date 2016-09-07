@@ -1,23 +1,46 @@
 // Typography
 
+h1 {
+    line-height: 2;
+    padding: 10px;
+}
+
 h2 {
     padding-top: 4rem;
     padding-bottom: 1rem;
 }
 
-%heading--large,
-.heading--large {
-    font-weight: $font-weight-bold;
-    line-height: 2;
-    padding: 10px;
+.h2--alt {
+    @extend h2;
+    padding-bottom: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+    text-align: center;
+    &:before {
+        border-bottom: 2px solid $red;
+        bottom: 0;
+        content: "";
+        left: 47%;
+        position: absolute;
+        width: 6%;
+    }
 }
 
-%heading--medium,
-.heading--medium {
-    font-size: 1.5rem;
+.work-detail--title {
+    @extend .h2--alt;
+    font-family: $serif;
+    font-size: 2.5rem;
     font-weight: $font-weight-bold;
-    line-height: 1;
-    color: $dark-gray;
+    text-align: center;
+}
+
+.work-detail--tag {
+    color: $red;
+    font-family: $sans;
+    font-size: 0.8rem;
+    font-weight: $font-weight-heavy;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 %heading--sub,
