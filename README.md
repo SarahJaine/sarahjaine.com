@@ -1,19 +1,6 @@
-# sarahjaine-profile
-
-
-
+# sarahjaine.com
 ---
 
-**Congratulations on your new mo-django project!**
-
-Below you will find instructions on how to bootstrap the project.
-This README should be updated to reflect the current state of the project,
-with any additions or modifications to the setup procedures or other items
-of note.
-
-**Now just delete this block and let's get going!**
-
----
 
 ## Developing
 
@@ -24,18 +11,7 @@ of note.
 
 ### Python and Django
 
-First you need to configure your environment:
-
-```
-cp env.example .env
-```
-
-Edit *.env* and set the values you need to run the project locally. When you
-start working on the project, run `source .env` or use
-[autoenv](https://github.com/kennethreitz/autoenv) to load the
-environment variables.
-
-Next, create a Python 3 virtual environment and install the requirements:
+Create a Python 3 virtual environment and install the requirements:
 
 ```
 mkvirtualenv --python=$(which python3) sarahjaine.com
@@ -76,8 +52,6 @@ First load the virtualenv:
 workon sarahjaine.com
 ```
 
-Then use [foreman](http://ddollar.github.io/foreman/) (or [forego](https://github.com/ddollar/forego)) to run the development processes:
-
 ```
 foreman start -f Procfile.dev
 ```
@@ -94,8 +68,6 @@ want to run a specific process, you can specify it directly:
 ```
 foreman start -f Procfile.dev web
 ```
-
-
 
 ### Procfile
 
@@ -144,10 +116,6 @@ https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app).
 heroku addons:create heroku-postgresql:hobby-basic
 ```
 
-
-
-
-
 ### Scheduler
 
 Heroku provides a basic scheduled task runner, but don't worry about installing
@@ -179,7 +147,3 @@ heroku addons:create ssl:endpoint
 Follow the
 [SSL Endpoint documentation](https://devcenter.heroku.com/articles/ssl-endpoint)
 to upload the custom cert and finish configuration.
-
-## Operational Notes
-
-

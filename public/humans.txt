@@ -3,9 +3,8 @@
 
 # TEAM
 
-    ISL -- Digital Creative Agency -- @istrategylabs
-
-# THANKS
+    Sarah-Jaine Szekeresh: frontend and backend engineering, content generation
+    Olivia Cheng: design and layout
 
 # TECHNOLOGY COLOPHON
 
