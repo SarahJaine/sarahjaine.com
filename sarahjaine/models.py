@@ -22,7 +22,7 @@ class Project(models.Model):
 	name = models.CharField(max_length=30, unique=True)
 	subtitle = models.CharField(max_length=50, unique=False)
 	teaser = models.CharField(max_length=500, unique=True)
-	description = models.CharField(blank=True, max_length=2000, unique=False)
+	description = models.TextField(blank=True, max_length=2000, unique=False)
 	slug = models.SlugField(db_index=True, unique=True)
 	order = models.IntegerField(default=0)
 	featured = models.BooleanField(default=True)

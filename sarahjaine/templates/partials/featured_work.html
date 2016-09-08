@@ -11,7 +11,7 @@
   								<source src="{{ project.video.url }}" type="video/mp4">
 							</video>
 						{% elif project.image %}
-							<img src="{{ project.image.url }}">
+							<a href="{% url 'work_detail' slug=project.slug %}"><img src="{{ project.image.url }}"></a>
 						{% endif %}	
 					</div>
 					<h3><a href="{% url 'work_detail' slug=project.slug %}">{{ project.name }}</a></h3>

@@ -18,7 +18,20 @@
 					{% endif %}
 				{% endfor %}
 			</p>
-			<p>{{ project.description }}</p>
+			<p>{{ project.teaser }}</p>
+			
+			<div class="global--thumbnail">
+				{% if project.video %}
+					<video width="440" height="auto" poster="{{ project.image.url }}" controls>
+							<source src="{{ project.video.url }}" type="video/mp4">
+					</video>
+				{% elif project.image %}
+					<img src="{{ project.image.url }}">
+				{% endif %}	
+			</div>
+
+			<p>{{ project.description|linebreaks }}</p>
+
 			<div class="global--centering-parent">
 				{% if project.hosted_url %}
 					<a href="{{ project.hosted_url }}" target="_blank" class="global--centering-child"><span class="global--button">Live Project</span></a>

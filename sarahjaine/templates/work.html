@@ -18,13 +18,15 @@
   								<source src="{{ project.video.url }}" type="video/mp4">
 							</video>
 						{% elif project.image %}
-							<img src="{{ project.image.url }}">
+							<a href="{% url 'work_detail' slug=project.slug %}"><img src="{{ project.image.url }}"></a>
 						{% endif %}	
 					</div>
 				</div>
 				<div class="small-12 medium-6 columns">
-					<a href="{% url 'work_detail' slug=project.slug %}"><h3>{{ project.name }}</h3></a>
-					<p>{{ project.teaser }}</p>
+					<div class="global--caption">
+						<h3><a href="{% url 'work_detail' slug=project.slug %}">{{ project.name }}</a></h3>
+						<p>{{ project.teaser }}</p>
+					</div>
 				</div>
 			</div>
 			{% endfor %}
