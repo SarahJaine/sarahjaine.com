@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^about/$', AboutView.as_view(), name='about'),
     url(r'^work/$', WorkList.as_view(), name='work_list'),
-    url(r'^work/$', WorkDetail.as_view(), name='work_detail'),
+    url(r'^work/(?P<slug>[-\w]+)$', WorkDetail.as_view(), name='work_detail'),
     url(r'^admin/', include(admin.site.urls)),
 ]

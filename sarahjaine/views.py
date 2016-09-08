@@ -2,18 +2,29 @@ from __future__ import unicode_literals
 
 from django.views.generic import TemplateView, ListView, DetailView
 
+from .models import Project
+
 
 class AboutView(TemplateView):
 	template_name = 'about.html'
 
 
-class HomeView(TemplateView):
-    template_name = 'index.html'
+class HomeView(ListView):
+	template_name = 'index.html'
+	model = Project
+
+	def get_context_data(self, **kwargs):
+		context = super(HomeView, self).get_context_data(**kwargs)
+		context['project_list'] = Project.objects.filter(
+			featured=True).order_by('order')
+		return context
 
 
 class WorkList(ListView):
-    template_name = 'work.html'
+	model = Project
+	template_name = 'work.html'
 
 
 class WorkDetail(DetailView):
-    template_name = 'work_detail.html'
+	model = Project
+	template_name = 'work_detail.html'
