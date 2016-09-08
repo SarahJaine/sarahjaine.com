@@ -8,12 +8,24 @@
 <section class="work section--middle-border">
 	<div class="row">
 		<div class="small-offset-1 small-10 columns">
-			<p class="work-detail--title">Building ISL Ideas</p>
-			<p class="work-detail--tag">Django<span class="global--circle"></span>Python</p>
-			<p>{{ work.description }}</p>
+			<p class="work-detail--title">{{ happy_chat|random}}&nbsp;{{ project.name }}</p>
+			
+			<p class="work-detail--tag">
+				{% for tag in project.tags.all %}
+					{{ tag }}
+					{% if forloop.last == False %}
+						<span class="global--circle"></span>
+					{% endif %}
+				{% endfor %}
+			</p>
+			<p>{{ project.description }}</p>
 			<div class="global--centering-parent">
-				<a href="/" class="global--centering-child"><span class="global--button">Live Project</span></a>
-				<a href="/" class="global--centering-child"><span class="global--button">Source Code</span></a>
+				{% if project.hosted_url %}
+					<a href="{{ project.hosted_url }}" target="_blank" class="global--centering-child"><span class="global--button">Live Project</span></a>
+				{% endif %}
+				{% if project.git_url %}
+					<a href="{{ project.git_url }}" target="_blank" class="global--centering-child"><span class="global--button">Source Code</span></a>
+				{% endif %}
 			</div>
 		</div>
 	</div>

@@ -29,3 +29,9 @@ class WorkList(ListView):
 class WorkDetail(DetailView):
 	model = Project
 	template_name = 'work_detail.html'
+
+	def get_context_data(self, **kwargs):
+		context = super(WorkDetail, self).get_context_data(**kwargs)
+		context['tags'] = Project.objects.filter(tags=True)
+		context['happy_chat'] = ['Building', 'Creating', 'The Making of', 'About']
+		return context
