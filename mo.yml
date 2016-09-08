@@ -1,0 +1,4 @@
+domain: sarahjaine.com
+heroku:
+  staging: sarahjaine.com-staging
+  production: sarahjaine.com
