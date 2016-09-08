@@ -23,6 +23,7 @@ class HomeView(ListView):
 class WorkList(ListView):
 	model = Project
 	template_name = 'work.html'
+	ordering = ('order')
 
 
 class WorkDetail(DetailView):

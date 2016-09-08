@@ -5,7 +5,15 @@
 			<div class="row">
 				{% for project in project_list %}
 				<div class="small-12 medium-6 columns">
-					<div class="global--thumbnail"><img src="static/img/tin_small.jpeg"></div>
+					<div class="global--thumbnail">
+						{% if project.video %}
+							<video width="440" height="auto" poster="{{ project.image.url }}" controls>
+  								<source src="{{ project.video.url }}" type="video/mp4">
+							</video>
+						{% elif project.image %}
+							<img src="{{ project.image.url }}">
+						{% endif %}	
+					</div>
 					<h3><a href="{% url 'work_detail' slug=project.slug %}">{{ project.name }}</a></h3>
 					<p>{{ project.teaser }}</p>
 				</div>

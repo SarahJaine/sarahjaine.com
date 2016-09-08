@@ -28,6 +28,8 @@ class Project(models.Model):
 	featured = models.BooleanField(default=True)
 	git_url = models.URLField(blank=True, unique=False)
 	hosted_url = models.URLField(blank=True, unique=False)
+	image = models.ImageField(blank=True, null=True, upload_to='project-images/')
+	video = models.FileField(blank=True, null=True, upload_to='project-videos/')
 	tags = models.ManyToManyField(Tag, blank=True)
 
 	class Meta:

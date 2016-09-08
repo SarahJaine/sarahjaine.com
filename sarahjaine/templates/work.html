@@ -8,22 +8,25 @@
 <section class="work section--middle-border">
 	<div class="row">
 		<div class="small-offset-1 small-10 columns">
-			<h2 class="h2--alt text--center">Recent Projects</h2>
+			<h2 class="h2--alt text--center">Projects</h2>
 			{% for project in project_list %}
 			<div class="row">
 				<div class="small-12 medium-6 columns">
 					<div class="global--thumbnail">
-						<img src="static/img/tin_small.jpeg">
+						{% if project.video %}
+							<video width="440" height="auto" poster="{{ project.image.url }}" controls>
+  								<source src="{{ project.video.url }}" type="video/mp4">
+							</video>
+						{% elif project.image %}
+							<img src="{{ project.image.url }}">
+						{% endif %}	
 					</div>
 				</div>
 				<div class="small-12 medium-6 columns">
 					<a href="{% url 'work_detail' slug=project.slug %}"><h3>{{ project.name }}</h3></a>
-					<br>
 					<p>{{ project.teaser }}</p>
-					<br>
 				</div>
 			</div>
-			<br>
 			{% endfor %}
 		</div>
 	</div>
