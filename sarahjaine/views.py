@@ -6,7 +6,7 @@ from .models import Project
 
 
 class AboutView(TemplateView):
-	template_name = 'about.html'
+	template_name = 'bio.html'
 
 
 class HomeView(ListView):

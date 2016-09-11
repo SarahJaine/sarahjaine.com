@@ -1,0 +1,13 @@
+.bio {
+	background-color: $blush;
+	min-height: 83vh;
+}
+
+.bio--textblock {
+	padding: 2rem 1rem 1rem 1rem;
+}
+
+.bio--imgblock{
+	@extend .bio--textblock;
+	padding-right: 2rem;
+}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block title %}Work{% endblock title %}
+
+{% block content %}
+
+{% include 'partials/header_bar_inner.html' %}
+<section class="bio section--middle-border">
+	<div class="row">
+		<div class="small-offset-1 small-10 columns">
+			<h2 class="h2--alt text--center">About Me</h2>
+			<div class="hide-for-small-only hide-for-medium-only small-12 large-4 columns bio--imgblock">
+				<img src="{% static 'img/justice_nobg.png' %}">
+			</div>
+			<div class="small-12 large-8 columns bio--textblock">
+				<p>I’m a full-stack developer living and working in Washington DC. In my free time, I teach beginner friendly Python classes through Hear Me Code.  I am actively seeking a full-time permanent position as a web deveoloper.</p>
+				<p>I am passionate about making the world a happier and more productive place through web development and software innovation.  Specifically, I want to harness the power of the internet to help vulnerable populations access needed resources.  I think the internet is the ideal tool for sharing ideas and experiences, and lifting each other up.</p>
+				<p>I am also passionate about learning and continuous personal improvement.  I am the happiest when I am teaching and learning.  In the next year I want to create an iOS app, learn more about web security and hacking, and finish another maker project.</p>
+			</div>
+			<div class="show-for-small-only small-12 bio--imgblock">
+				<img src="{% static 'img/justice_nobg.png' %}">
+			</div>
+		</div>
+	</div>
+</section>
+{% include 'partials/footer_bar.html' %}
+
+{% endblock %}
