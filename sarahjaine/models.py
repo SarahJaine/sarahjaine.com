@@ -29,6 +29,7 @@ class Project(models.Model):
 	git_url = models.URLField(blank=True, unique=False)
 	hosted_url = models.URLField(blank=True, unique=False)
 	image = models.ImageField(blank=True, null=True, upload_to='project-images/')
+	image_detail = models.ImageField(blank=True, null=True, upload_to='project-images/')
 	video = models.FileField(blank=True, null=True, upload_to='project-videos/')
 	tags = models.ManyToManyField(Tag, blank=True)
 

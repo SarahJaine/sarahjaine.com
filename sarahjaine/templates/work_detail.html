@@ -19,9 +19,12 @@
 				{% endfor %}
 			</p>
 			<p>{{ project.teaser }}</p>
-			
+			<
+			<div class="small-12 medium-6 columns">
 			<div class="global--thumbnail">
-				{% if project.video %}
+				{% if project.image_detail %}
+					<img src="{{ project.image_detail.url }}">
+				{% elif project.video %}
 					<video width="440" height="auto" poster="{{ project.image.url }}" controls>
 							<source src="{{ project.video.url }}" type="video/mp4">
 					</video>
