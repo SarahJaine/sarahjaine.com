@@ -35,19 +35,21 @@
 // Alignment
 
 .block--align-center-left {
-	position:relative;
-
+	position: absolute;
+	width: 90%;
 	@include breakpoint(small) {
-		position:relative;
-		left:5%;
-		top:15%;
-		width: 90%;
+		top: 20%;
+		left: 5%;
+    }
+
+    @include breakpoint(medium) {
+    	top: 30%;
+		left: 5%;
     }
 
     @include breakpoint(large) {
-		position:relative;
-		left: 18%;
 		top: 35%;
+		left: 18%;
     }
 
 }

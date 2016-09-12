@@ -2,10 +2,12 @@
 
 .header--bar {
 	background-color: $light-blue;
-	height: 70px;
+	height: 3rem;
+	padding-left: 0.1rem;
+	padding-right: 0.1rem;
 	a {
 		color: $black;
-		padding: 0.2rem 1rem 0.2rem 1rem;
+		padding: 0.1rem 0.2rem 0.1rem 0.2rem;
 		font-weight: $font-weight-heavy;
 		letter-spacing: 0.1rem;
 		&:hover, &:active {
@@ -15,12 +17,18 @@
 			border-radius: 1rem;
 		}
 		@include breakpoint(small) {
-			margin: 0.8rem 0.3rem 0.8rem 0.3rem;
-			font-size: 0.5rem;
+			margin: 1rem 0.2rem 1rem 0.2rem;
+			font-size: 0.6rem;
 		}
 		@include breakpoint(medium) {
+			padding: 0.2rem 0.4rem 0.2rem 0.4rem;
 			margin: 0.7rem;
 			font-size: 0.9rem;
+		}
+		@include breakpoint(large) {
+			padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+			font-size: 1rem;
+			margin: 0.5rem;
 		}
 	}
 }
@@ -42,6 +50,5 @@
 }
 
 .footer--contact-icon {
-	padding-top: 1rem;
-	padding-right: 2rem;
+	padding: 1rem;
 }
