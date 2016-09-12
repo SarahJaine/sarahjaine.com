@@ -5,7 +5,7 @@
 {% block content %}
 
 {% include 'partials/header_bar_inner.html' %}
-<section class="work section--middle-border">
+<section class="work section--no-bottom-border">
 	<div class="row">
 		<div class="small-offset-1 small-10 columns">
 			<p class="work-detail--title">{{ happy_chat|random}}&nbsp;{{ project.name }}</p>
@@ -18,15 +18,14 @@
 					{% endif %}
 				{% endfor %}
 			</p>
+
 			<p>{{ project.teaser }}</p>
-			<
-			<div class="small-12 medium-6 columns">
+
+
 			<div class="global--thumbnail">
-				{% if project.image_detail %}
-					<img src="{{ project.image_detail.url }}">
-				{% elif project.video %}
-					<video width="440" height="auto" poster="{{ project.image.url }}" controls>
-							<source src="{{ project.video.url }}" type="video/mp4">
+				{% if project.video %}
+					<video poster="{{ project.image.url }}" controls width="100%">
+						<source src="{{ project.video.url }}" type="video/mp4">
 					</video>
 				{% elif project.image %}
 					<img src="{{ project.image.url }}">
@@ -43,9 +42,28 @@
 					<a href="{{ project.git_url }}" target="_blank" class="global--centering-child"><span class="global--button">Source Code</span></a>
 				{% endif %}
 			</div>
+
 		</div>
-	</div>
+	</div> <!-- end row -->
 </section>
+<section class="work work--nav-border">
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="global--centering-parent">
+				{% if previous.slug %}
+					<a class="block--align-left work-detail--nav" href="{% url 'work_detail' slug=previous.slug %}"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;{{ previous.name }}</a>
+				{% endif %}
+				<a class="work-detail--nav hide-for-small" href="{% url 'work_list' %}">All Projects</a>
+				{% if next.slug %}
+					<a class="block--align-right work-detail--nav" href="{% url 'work_detail' slug=next.slug %}">{{ next.name }}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+				{% endif %}
+			</div>
+		</div>
+	</div> <!-- end row -->
+</section>
+
+	
+
 {% include 'partials/footer_bar.html' %}
 
 {% endblock %}
