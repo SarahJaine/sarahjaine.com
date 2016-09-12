@@ -14,7 +14,7 @@
 				<div class="small-12 medium-6 columns">
 					<div class="global--thumbnail">
 						{% if project.video %}
-							<video width="440" height="auto" poster="{{ project.image.url }}" controls>
+							<video poster="{{ project.image.url }}" controls width="100%">
   								<source src="{{ project.video.url }}" type="video/mp4">
 							</video>
 						{% elif project.image %}
