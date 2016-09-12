@@ -19,7 +19,7 @@
 				{% endfor %}
 			</p>
 
-			<p>{{ project.teaser }}</p>
+			<p class="work-detail--teaser">{{ project.teaser }}</p>
 
 
 			<div class="global--thumbnail">
@@ -33,7 +33,7 @@
 			</div>
 
 			<p>{{ project.description|linebreaks }}</p>
-
+			<br>
 			<div class="global--centering-parent">
 				{% if project.hosted_url %}
 					<a href="{{ project.hosted_url }}" target="_blank" class="global--centering-child"><span class="global--button">Live Project</span></a>
@@ -46,14 +46,16 @@
 		</div>
 	</div> <!-- end row -->
 </section>
+
 <section class="work work--nav-border">
+<hr class="global--divider">
 	<div class="row">
 		<div class="small-12 columns">
 			<div class="global--centering-parent">
 				{% if previous.slug %}
 					<a class="block--align-left work-detail--nav" href="{% url 'work_detail' slug=previous.slug %}"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;{{ previous.name }}</a>
 				{% endif %}
-				<a class="work-detail--nav hide-for-small" href="{% url 'work_list' %}">All Projects</a>
+				<a class="block--align-center hide-for-small work-detail--nav" href="{% url 'work_list' %}">Projects</a>
 				{% if next.slug %}
 					<a class="block--align-right work-detail--nav" href="{% url 'work_detail' slug=next.slug %}">{{ next.name }}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 				{% endif %}

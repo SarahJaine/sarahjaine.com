@@ -13,6 +13,10 @@ $alabaster: #EAEAEA;
 $light-blue: #c3e7ef;
 $red: #e9533f;
 $blush: #f4ebee;
+$salmon: #E88B7F;
+$pink: #E8ACA4;
+$silver: #C9B9B7;
+
 
 // ii. Typography
 $sans: 'Open Sans', sans-serif;
@@ -168,9 +172,9 @@ $anchor-color: $red;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -30%);
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $hr-width: $global-width;
-// $hr-border: 1px solid $medium-gray;
-// $hr-margin: rem-calc(20) auto;
+$hr-width: 100%;
+$hr-border: 1px solid $pink;
+$hr-margin: 0rem;
 $list-lineheight: 3;
 // $list-margin-bottom: $paragraph-margin-bottom;
 // $list-style-type: disc;

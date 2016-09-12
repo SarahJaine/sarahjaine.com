@@ -44,7 +44,12 @@ h2 {
     text-transform: uppercase;
 }
 
+.work-detail--teaser {
+    font-size: 1.2rem;
+}
+
 .work-detail--nav {
+    padding: 1rem 0rem 1rem 0rem;
     @include breakpoint(small) {
         font-size: 0.8rem;
     }
