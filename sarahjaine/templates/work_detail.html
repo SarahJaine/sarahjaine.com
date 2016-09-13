@@ -23,10 +23,10 @@
 			
 			<p class="heading--sub">{{ project.subtitle_1 }}</p>
 			<p>{{ project.paragraph_1 }}</p>
-
+			
 			<div class="global--thumbnail">
 				{% if project.video %}
-					<video poster="{{ project.image.url }}" controls width="100%">
+					<video poster="{{ project.video_image.url }}" controls width="100%">
 						<source src="{{ project.video.url }}" type="video/mp4">
 					</video>
 				{% elif project.image %}

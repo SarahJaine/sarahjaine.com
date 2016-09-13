@@ -13,11 +13,7 @@
 			<div class="row">
 				<div class="small-12 medium-6 columns">
 					<div class="global--thumbnail">
-						{% if project.video %}
-							<video poster="{{ project.image.url }}" controls width="100%">
-  								<source src="{{ project.video.url }}" type="video/mp4">
-							</video>
-						{% elif project.image %}
+						{% if project.image %}
 							<a href="{% url 'work_detail' slug=project.slug %}"><img src="{{ project.image.url }}"></a>
 						{% endif %}	
 					</div>

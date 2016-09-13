@@ -37,6 +37,7 @@ class Project(models.Model):
 	image = models.ImageField(blank=True, null=True, upload_to='project-images/')
 	image_detail = models.ImageField(blank=True, null=True, upload_to='project-images/')
 	video = models.FileField(blank=True, null=True, upload_to='project-videos/')
+	video_image = models.ImageField(blank=True, null=True, upload_to='project-videos/')
 	tags = models.ManyToManyField(Tag, blank=True)
 
 	class Meta:

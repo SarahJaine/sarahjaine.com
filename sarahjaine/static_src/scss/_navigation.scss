@@ -3,13 +3,13 @@
 .header--bar {
 	background-color: $light-blue;
 	height: 3rem;
-	padding-left: 0.1rem;
-	padding-right: 0.1rem;
 	a {
 		color: $black;
-		padding: 0.1rem 0.2rem 0.1rem 0.2rem;
-		font-weight: $font-weight-heavy;
+		margin: 0.65rem 0.75rem 0.65rem 0.75rem;
+		padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+		font-weight: $font-weight-bold;
 		letter-spacing: 0.1rem;
+		font-size: 1rem;
 		&:hover, &:active {
 			color: $white;
 			background-color: $red;
@@ -17,18 +17,19 @@
 			border-radius: 1rem;
 		}
 		@include breakpoint(small) {
-			margin: 1rem 0.2rem 1rem 0.2rem;
-			font-size: 0.6rem;
+			margin: 0.8rem 0.2rem 0.8rem 0.2rem;
+			padding: 0.1rem 0.2rem 0.1rem 0.2rem;
+			font-size: 0.7rem;
 		}
 		@include breakpoint(medium) {
+			margin: 0.65rem 0.75rem 0.65rem 0.75rem;
 			padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-			margin: 0.7rem;
-			font-size: 0.9rem;
+			font-size: 1rem;
 		}
 		@include breakpoint(large) {
-			padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+			margin: 0.65rem 0.75rem 0.65rem 0.75rem;
+			padding: 0.2rem 0.4rem 0.2rem 0.4rem;
 			font-size: 1rem;
-			margin: 0.5rem;
 		}
 	}
 }
@@ -39,7 +40,7 @@
 	background-position: center center;
 	background-size: cover;
 	a {
-		background-color: $white;
+		background-color: white;
 	}
 }
 
@@ -47,8 +48,11 @@
 
 .footer--bar-inner {
 	@extend .header--bar;
-}
-
-.footer--contact-icon {
-	padding: 1rem;
+	a {
+		&:hover, &:active {
+			color: $red;
+			background-color: initial;
+			border: initial;
+		}
+	}
 }
