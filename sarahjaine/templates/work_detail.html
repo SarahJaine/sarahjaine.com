@@ -7,7 +7,7 @@
 {% include 'partials/header_bar_inner.html' %}
 <section class="work section--no-bottom-border">
 	<div class="row">
-		<div class="small-offset-1 small-10 columns">
+		<div class="small-offset-2 small-8 columns">
 			<p class="work-detail--title">{{ happy_chat|random}}&nbsp;{{ project.name }}</p>
 			
 			<p class="work-detail--tag">
@@ -20,7 +20,9 @@
 			</p>
 
 			<p class="work-detail--teaser">{{ project.teaser }}</p>
-
+			
+			<p class="heading--sub">{{ project.subtitle_1 }}</p>
+			<p>{{ project.paragraph_1 }}</p>
 
 			<div class="global--thumbnail">
 				{% if project.video %}
@@ -31,6 +33,9 @@
 					<img src="{{ project.image.url }}">
 				{% endif %}	
 			</div>
+			
+			<p class="heading--sub">{{ project.subtitle_2 }}</p>
+			<p>{{ project.paragraph_2 }}</p>
 
 			<p>{{ project.description|linebreaks }}</p>
 			<br>
