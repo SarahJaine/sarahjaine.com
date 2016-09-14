@@ -93,8 +93,8 @@ if PRODUCTION_FLAG:
             'NAME': config('NAME'),
             'USER': config('USER'),
             'PASSWORD': config('PASSWORD'),
-            'HOST': '',
-            'PORT': '',
+            'HOST': config('HOST'),
+            'PORT': config('POST'),
         }
     }
 else:
