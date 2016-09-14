@@ -2,21 +2,10 @@
 // ----------------------------------
 // 
 // i. colors
-$blonde: #FBF2C0;
-$purple: #521945;
-$orange: #BC412B;
-$blue: #08415C;
-$dark-blue: #0D1B2A;
-$black-text: #1E1E24;
-$alabaster: #EAEAEA;
-
 $light-blue: #c3e7ef;
 $red: #e9533f;
 $blush: #f4ebee;
-$salmon: #E88B7F;
 $pink: #E8ACA4;
-$silver: #C9B9B7;
-
 
 // ii. Typography
 $sans: 'Open Sans', sans-serif;
@@ -137,7 +126,7 @@ $header-font-weight: $font-weight-bold;
 // $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 22,
+    'h1': 18,
     'h2': 23,
     'h3': 22,
     'h4': 20,
@@ -145,7 +134,7 @@ $header-sizes: (
     'h6': 16,
   ),
   medium: (
-    'h1': 30,
+    'h1': 28,
     'h2': 28,
     'h3': 18,
     'h4': 25,

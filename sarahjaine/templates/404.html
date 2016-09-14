@@ -1,13 +1,57 @@
-{% extends 'base.html' %}
-{% block content %}
+<style type="text/css">
+	h1, p {
+		color: #404040;
+	}
+	h1 {
+		font-family: 'Open Sans', sans-serif;
+	}
+	p {
+		font-family: 'Gentium Book Basic', serif;
+		font-size: 1.2rem;
+	}
+	a {
+		color: #e9533f;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #B23F30;
+	}
+	body {
+		background-color: #c3e7ef;
+		border: 10px solid #fefefe;
+		position: relative;
+		margin: 0rem;
+		padding: 10% 5% 10% 5%;
+	}
+	.error--content {
+		text-align: center;
+	}
+	.error--image {
+		background-color: #fefefe;
+		border: 10px solid #fefefe;
+		filter: drop-shadow(0px 0px 2px #cacaca);
+		width: 50%;
+		margin: 5%;
+	}
+</style>
 
-<section class="error section--full-border">
-	<div class="row">
-		<div class="small-12 columns">
-			<h2 class="text--center">Error 404:&nbsp;&nbsp;We can't find that page.</h2>
-			<p class="text--center">Let's go <a href="{% url 'home' %}">home</a> and start over.</p>
-			<img class="error--image global--thumbnail" src="{{root}}assets/img/charlie_brown.gif"/>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400|Open+Sans:700" rel="stylesheet">
+
+        <title>404 - Sarah-Jaine</title>
+    </head>
+    <body>
+		<div class="error--content">
+			<h1>Error 404</h1>
+			<p>We can't find that page.</p>
+			<p>Let's go <a href="https://sarahjaine.com/">home</a> and start over.</p>
+			<img class="error--image" src="https://sarahjaine.com/charlie_brown.gif"/>
 		</div>
-	</div>
-</section>
-{% endblock %}
+	</body>
+</html>

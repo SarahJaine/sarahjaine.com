@@ -4,6 +4,7 @@
 	background-image: url('../img/floral_bg.png');
 	background-position: center center;
 	background-size: cover;
+	position: relative;
 	@include breakpoint(small) {
 		min-height: 320px;
         height: 70vh;

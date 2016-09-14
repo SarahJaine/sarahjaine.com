@@ -36,22 +36,24 @@
 
 .block--align-center-left {
 	position: absolute;
-	width: 90%;
 	@include breakpoint(small) {
-		top: 20%;
+		top: 10%;
+		right: 5%;
+		bottom: 10%;
 		left: 5%;
     }
-
     @include breakpoint(medium) {
-    	top: 30%;
-		left: 5%;
+    	top: 20%;
+    	right: 10%;
+		bottom: 20%;
+		left: 10%;
     }
-
     @include breakpoint(large) {
-		top: 35%;
+		top: 27%;
+		right: 18%;
+		bottom: 27%;
 		left: 18%;
     }
-
 }
 
 .block--align-left {
@@ -81,6 +83,7 @@
 .white-highlight {
 	background-color: $white;
 	padding: 5px;
+	margin: 0px;
 }
 
 .global--button {
