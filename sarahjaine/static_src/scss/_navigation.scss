@@ -49,6 +49,11 @@
 .footer--bar-inner {
 	@extend .header--bar;
 	a {
+		&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+			margin-left: 0rem;
+			margin-right: 0rem;
+			font-size: 1rem;
+		}
 		&:hover, &:active {
 			color: $red;
 			background-color: initial;
