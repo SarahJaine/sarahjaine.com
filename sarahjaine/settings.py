@@ -94,7 +94,7 @@ if PRODUCTION_FLAG:
             'USER': config('USER'),
             'PASSWORD': config('PASSWORD'),
             'HOST': config('HOST'),
-            'PORT': config('POST'),
+            'PORT': config('PORT'),
         }
     }
 else:
