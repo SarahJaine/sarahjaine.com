@@ -120,6 +120,10 @@ STATIC_URL = '/static/'
 
 if PRODUCTION_FLAG:
     STATIC_ROOT = '/home/sarahjaine/webapps/profile_static'
+    STATICFILES_DIRS = (
+        '/home/sarahjaine/webapps/profile_v3/sarahjaine.com/sarahjaine/static_src',
+        '/home/sarahjaine/webapps/profile_v3/sarahjaine.com/sarahjaine/templates',
+    )
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
 
