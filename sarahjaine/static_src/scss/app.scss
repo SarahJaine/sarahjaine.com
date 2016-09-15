@@ -2,13 +2,13 @@
 
 @import 'settings';
 
-// @import 'foundation'; --included for local
+@import 'foundation';
 // @import 'motion-ui';
 
-// @include foundation-global-styles; --included for local
-// @include foundation-grid; --included for local
+@include foundation-global-styles;
+@include foundation-grid;
 // @include foundation-flex-grid;
-// @include foundation-typography; --included for local
+@include foundation-typography;
 // @include foundation-button;
 // @include foundation-forms;
 // @include foundation-range-input;
@@ -39,11 +39,11 @@
 // @include foundation-switch;
 // @include foundation-table;
 // @include foundation-tabs;
-// @include foundation-thumbnail; --included for local
+@include foundation-thumbnail;
 // @include foundation-title-bar;
 // @include foundation-tooltip;
 // @include foundation-top-bar;
-// @include foundation-visibility-classes; --included for local
+@include foundation-visibility-classes;
 // @include foundation-float-classes;
 // @include foundation-flex-classes;
 

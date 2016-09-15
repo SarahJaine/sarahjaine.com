@@ -26,11 +26,6 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-PRODUCTION_FLAG = config('PRODUCTION_FLAG', default=False, cast=bool)
-
-if PRODUCTION_FLAG:
-    ADMINS = (config('ADMIN_NAME'), config('ADMIN_EMAIL'))
-
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='',
                        cast=lambda v: [s.strip() for s in v.split(',')])
 
@@ -86,21 +81,9 @@ WSGI_APPLICATION = 'sarahjaine.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-if PRODUCTION_FLAG:
-    DATABASES = {
-        'default': {
-            'ENGINE': config('ENGINE'),
-            'NAME': config('NAME'),
-            'USER': 'dev',
-            'PASSWORD': config('PASSWORD'),
-            'HOST': config('HOST'),
-            'PORT': config('PORT'),
-        }
-    }
-else:
-    DATABASES = {
-        'default': dj_database_url.config(conn_max_age=600),
-    }
+DATABASES = {
+    'default': dj_database_url.config(conn_max_age=600),
+}
 
 
 # Internationalization
@@ -118,14 +101,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-if PRODUCTION_FLAG:
-    STATIC_ROOT = '/home/sarahjaine/webapps/profile_static'
-    STATICFILES_DIRS = (
-        '/home/sarahjaine/webapps/profile_v3/sarahjaine.com/sarahjaine/static_src',
-        '/home/sarahjaine/webapps/profile_v3/sarahjaine.com/sarahjaine/templates',
-    )
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
