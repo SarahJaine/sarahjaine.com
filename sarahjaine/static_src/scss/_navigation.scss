@@ -20,6 +20,7 @@
 			margin: 0.8rem 0.2rem 0.8rem 0.2rem;
 			padding: 0.1rem 0.2rem 0.1rem 0.2rem;
 			font-size: 0.7rem;
+			font-weight: $font-weight-medium;
 		}
 		@include breakpoint(medium) {
 			margin: 0.65rem 0.75rem 0.65rem 0.75rem;
