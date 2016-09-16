@@ -7,7 +7,7 @@
 {% include 'partials/header_bar_inner.html' %}
 <section class="work section--no-bottom-border">
 	<div class="row">
-		<div class="small-12 columns">
+		<div class="small-12 columns medium-offset-1 medium-10 large-offset-2 large-8 columns">
 			<p class="work-detail--title">{{ happy_chat|random}}&nbsp;{{ project.name }}</p>
 			
 			<p class="work-detail--tag">
@@ -37,7 +37,9 @@
 			<p class="heading--sub">{{ project.subtitle_2 }}</p>
 			<p>{{ project.paragraph_2 }}</p>
 
-			<p>{{ project.description|linebreaks }}</p>
+			<p class="heading--sub">{{ project.subtitle_3 }}</p>
+			<p>{{ project.paragraph_3 }}</p>
+
 			<br>
 			<div class="global--centering-parent">
 				{% if project.hosted_url %}
