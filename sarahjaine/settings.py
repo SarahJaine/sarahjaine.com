@@ -125,6 +125,13 @@ MEDIA_MAX_UPLOAD_SIZE = 10485760
 MEDIA_MAX_UPLOAD_SIZE_DISPLAY = '10MB'
 MEDIA_ALLOWED_FILETYPES = ['GIF', 'JPEG', 'JPG', 'MPO', 'PDF', 'PNG']
 
+if config('USE_S3', cast=bool, default=True):
+
+    S3_BUCKET = config('S3_BUCKET')
+    AWS_QUERYSTRING_AUTH = False
+
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
 # Sentry
 
 SENTRY_DSN = config('SENTRY_DSN', default=None)
