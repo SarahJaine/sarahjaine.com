@@ -12,4 +12,6 @@ sqlparse>=0.1,<0.2
 psycopg2>=2.6,<2.7
 
 raven>=5.16,<5.17
+
+django-storages==1.4.1
 Pillow==3.3.1
