@@ -116,24 +116,6 @@ https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app).
 heroku addons:create heroku-postgresql:hobby-basic
 ```
 
-### Scheduler
-
-Heroku provides a basic scheduled task runner, but don't worry about installing
-it unless you project needs one.
-
-```
-heroku addons:create scheduler:standard
-```
-
-To create a new scheduled task, run:
-
-```
-heroku addons:open scheduler
-```
-
-The scheduler admin will open in your browser, then click the
-**Add new job** button.
-
 ### HTTPS
 
 All projects should use HTTPS in production. Some projects will terminate on
