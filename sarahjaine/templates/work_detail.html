@@ -21,24 +21,38 @@
 
 			<p class="work-detail--teaser">{{ project.teaser }}</p>
 			
-			<p class="heading--sub">{{ project.subtitle_1 }}</p>
-			<p>{{ project.paragraph_1 }}</p>
+			{% if project.subtitle_1 %}
+				<p class="heading--sub">{{ project.subtitle_1 }}</p>
+				<p>{{ project.paragraph_1 }}</p>
+			{% endif %}	
 			
-			<div class="global--thumbnail">
-				{% if project.video %}
+			{% if project.video %}
+				<div class="global--thumbnail">
 					<video poster="{{ project.video_image.url }}" controls width="100%">
 						<source src="{{ project.video.url }}" type="video/mp4">
 					</video>
-				{% elif project.image %}
-					<img src="{{ project.image.url }}">
-				{% endif %}	
-			</div>
+				</div>
+			{% elif project.image_detail %}
+				<div class="global--thumbnail">
+					<img src="{{ project.image_detail.url }}">
+				</div>
+			{% endif %}	
 			
-			<p class="heading--sub">{{ project.subtitle_2 }}</p>
-			<p>{{ project.paragraph_2 }}</p>
+			{% if project.subtitle_2 %}
+				<p class="heading--sub">{{ project.subtitle_2 }}</p>
+				<p>{{ project.paragraph_2 }}</p>
+			{% endif %}
 
-			<p class="heading--sub">{{ project.subtitle_3 }}</p>
-			<p>{{ project.paragraph_3 }}</p>
+			{% if project.video and project.image_detail %}
+				<div class="global--thumbnail">
+					<img src="{{ project.image_detail.url }}">
+				</div>
+			{% endif %}	
+			
+			{% if project.subtitle_3 %}
+				<p class="heading--sub">{{ project.subtitle_3 }}</p>
+				<p>{{ project.paragraph_3 }}</p>
+			{% endif %}
 
 			<br>
 			<div class="global--centering-parent">
