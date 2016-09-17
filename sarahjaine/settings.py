@@ -127,7 +127,7 @@ MEDIA_ALLOWED_FILETYPES = ['GIF', 'JPEG', 'JPG', 'MPO', 'PDF', 'PNG']
 
 if config('USE_S3', cast=bool, default=True):
 
-    S3_BUCKET = config('S3_BUCKET')
+    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
     AWS_QUERYSTRING_AUTH = False
 
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
