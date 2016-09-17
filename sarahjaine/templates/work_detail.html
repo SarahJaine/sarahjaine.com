@@ -23,7 +23,7 @@
 			
 			{% if project.subtitle_1 %}
 				<p class="heading--sub">{{ project.subtitle_1 }}</p>
-				<p>{{ project.paragraph_1 }}</p>
+				<p>{{ project.paragraph_1|linebreaks }}</p>
 			{% endif %}	
 			
 			{% if project.video %}
@@ -40,7 +40,7 @@
 			
 			{% if project.subtitle_2 %}
 				<p class="heading--sub">{{ project.subtitle_2 }}</p>
-				<p>{{ project.paragraph_2 }}</p>
+				<p>{{ project.paragraph_2|linebreaks }}</p>
 			{% endif %}
 
 			{% if project.video and project.image_detail %}
@@ -51,7 +51,7 @@
 			
 			{% if project.subtitle_3 %}
 				<p class="heading--sub">{{ project.subtitle_3 }}</p>
-				<p>{{ project.paragraph_3 }}</p>
+				<p>{{ project.paragraph_3|linebreaks }}</p>
 			{% endif %}
 
 			<br>
