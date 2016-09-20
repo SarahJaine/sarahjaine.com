@@ -1,4 +1,4 @@
-{% load static from staticfiles %}
+{% load staticfiles %}
 
 <!doctype html>
 <html lang="en">
@@ -7,16 +7,14 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="Hello. I am a web developer living in Washington DC and these are some of my projects.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
         {# Facebook Open Graph Tags #}
         <meta property="og:title" content="Sarah-Jaine Szekeresh's Portfolio" />
-        <meta property="og:site_name" content="" />
         <meta property="og:url" content="https://sarahjaine.com/" />
         <meta property="og:description" content="Hello. I am a web developer living in Washington DC and these are some of my projects." />
-        <meta property="fb:app_id" content="">
+        <meta property="fb:app_id" content="523707504468926">
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content="{% static 'img/headshot_opengraph.jpg' %}" />
 
         {# Twitter Summary Card with Large Image tags #}
         <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +22,7 @@
         <meta name="twitter:creator" content="@sarahjaine_sz">
         <meta name="twitter:title" content="Sarah-Jaine Szekeresh's Portfolio">
         <meta name="twitter:description" content="Hello. I am a web developer living in Washington DC and these are some of my projects.">
-        <meta name="twitter:image" content="{% static 'img/Lookup_sm.png' %}">
+        <meta name="twitter:image" content="{% static 'img/headshot_opengraph.jpg' %}">
         
         <link rel="stylesheet" href="{% static 'css/app.css' %}">
         <script src="{% static 'js/bundle.js' %}" async defer></script>
