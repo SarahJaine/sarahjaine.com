@@ -9,8 +9,6 @@
 * Python 3
 * [foreman](http://ddollar.github.io/foreman/)
 
-### Python and Django
-
 Create a Python 3 virtual environment and install the requirements:
 
 ```
