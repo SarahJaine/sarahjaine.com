@@ -21,7 +21,7 @@
 		border: 10px solid #fefefe;
 		position: relative;
 		margin: 0rem;
-		padding: 10% 5% 10% 5%;
+		padding: 5%;
 	}
 	.error--content {
 		text-align: center;
@@ -31,12 +31,13 @@
 		border: 10px solid #fefefe;
 		filter: drop-shadow(0px 0px 2px #cacaca);
 		width: 50%;
-		margin: 5%;
+		margin: 1%;
 	}
 </style>
 
 <!doctype html>
 <html lang="en">
+{% load static from staticfiles %}
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -51,7 +52,7 @@
 			<h1>Error 404</h1>
 			<p>We can't find that page.</p>
 			<p>Let's go <a href="https://sarahjaine.com/">home</a> and start over.</p>
-			<img class="error--image" src="https://sarahjaine-profile.herokuapp.com/charlie_brown.gif"/>
+			<img class="error--image" src="{% static 'img/charlie_brown.gif' %}"/>
 		</div>
 	</body>
 </html>
