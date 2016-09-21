@@ -9,6 +9,8 @@
 *.sqlite
 *.db
 *.swp
+*.key
+*.crt
 *~
 __pycache__/
 /tmp/
