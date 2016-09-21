@@ -4,7 +4,9 @@
 # TEAM
 
     Sarah-Jaine Szekeresh: frontend and backend engineering, content generation
-    Olivia Cheng: design and layout
+    Special thanks to:
+    	Olivia Cheng: design and layout
+    	iStrategyLabs: Django Cookiecutter project template https://github.com/istrategylabs/mo-django
 
 # TECHNOLOGY COLOPHON
 
