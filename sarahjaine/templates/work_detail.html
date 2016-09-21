@@ -76,7 +76,7 @@
 				{% if previous.slug %}
 					<a class="block--align-left work-detail--nav" href="{% url 'work_detail' slug=previous.slug %}"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;{{ previous.name }}</a>
 				{% endif %}
-				<a class="block--align-center hide-for-small work-detail--nav" href="{% url 'work_list' %}">Projects</a>
+				<a class="block--align-center hide-for-small work-detail--nav" href="{% url 'work_list' %}">Work</a>
 				{% if next.slug %}
 					<a class="block--align-right work-detail--nav" href="{% url 'work_detail' slug=next.slug %}">{{ next.name }}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 				{% endif %}
