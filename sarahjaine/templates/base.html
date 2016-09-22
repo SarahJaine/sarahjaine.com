@@ -18,7 +18,7 @@
 
         {# Facebook Open Graph Tags #}
         <meta property="og:title" content="Sarah-Jaine Szekeresh's Portfolio" />
-        <meta property="og:url" content="https://sarahjaine.com/" />
+        <meta property="og:url" content="https://www.sarahjaine.com/" />
         <meta property="og:description" content="Hello. I am a web developer living in Washington DC and these are some of my projects." />
         <meta property="fb:app_id" content="523707504468926">
         <meta property="og:type" content="website" />
@@ -32,9 +32,18 @@
         <meta name="twitter:description" content="Hello. I am a web developer living in Washington DC and these are some of my projects.">
         <meta name="twitter:image" content="{% static 'img/headshot_opengraph.jpg' %}">
         
+         <!-- Google analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-72527745-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+
         <link rel="stylesheet" href="{% static 'css/app.css' %}">
         <script src="{% static 'js/bundle.js' %}" async defer></script>
-
         <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i|Open+Sans:400,600,600i,700,700i" rel="stylesheet">
         <script src="https://use.fontawesome.com/998d0f8dda.js"></script>
 
