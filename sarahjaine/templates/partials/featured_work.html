@@ -5,7 +5,7 @@
 			<div class="row">
 				{% for project in project_list %}
 				<div class="small-12 medium-6 columns">
-					<div class="global--thumbnail">
+					<div class="global--thumbnail" aria-hidden="true">
 						{% if project.image %}
 							<a href="{% url 'work_detail' slug=project.slug %}"><img src="{{ project.image.url }}"></a>
 						{% endif %}	

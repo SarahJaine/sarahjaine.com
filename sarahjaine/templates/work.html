@@ -5,6 +5,8 @@
 {% block content %}
 
 {% include 'partials/header_bar_inner.html' %}
+<main>
+
 <section class="work section--middle-border">
 	<div class="row">
 		<div class="small-12 columns medium-offset-1 medium-10 columns">
@@ -12,7 +14,7 @@
 			{% for project in project_list %}
 			<div class="row">
 				<div class="small-12 medium-6 columns">
-					<div class="global--thumbnail">
+					<div class="global--thumbnail" aria-hidden="true">
 						{% if project.image %}
 							<a href="{% url 'work_detail' slug=project.slug %}"><img src="{{ project.image.url }}"></a>
 						{% endif %}	
@@ -29,6 +31,8 @@
 		</div>
 	</div>
 </section>
+
+</main>
 {% include 'partials/footer_bar.html' %}
 
 {% endblock %}

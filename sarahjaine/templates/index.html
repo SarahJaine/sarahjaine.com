@@ -2,7 +2,6 @@
 {% load static from staticfiles %}
 
 {% block title %}Home{% endblock title %}
-
 {% block content %}
 
 {% include 'partials/header_bar.html' %}
@@ -21,12 +20,14 @@
 	</div>
 </section>
 
+<main>
+
 {% include 'partials/featured_work.html' %}
 
 <section class="contact section--bottom-border">
 	<div class="row">
 		<div class="small-12 medium-6 columns">
-			<img class="contact--headshot-image hide-for-small-only" src="{% static 'img/headshot_nobg.png' %}">
+			<img class="contact--headshot-image hide-for-small-only" src="{% static 'img/headshot_nobg.png' %}" alt="professional headshot">
 		</div>
 		<div class="small-12 medium-6 columns contact--textblock">
 			<h2 class="heading--medium">Get In Touch</h2>
@@ -40,4 +41,5 @@
 	</div>
 </section>
 
+</main>
 {% endblock %}

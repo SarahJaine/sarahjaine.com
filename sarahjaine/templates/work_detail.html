@@ -5,6 +5,8 @@
 {% block content %}
 
 {% include 'partials/header_bar_inner.html' %}
+<main>
+
 <section class="work section--no-bottom-border">
 	<div class="row">
 		<div class="small-12 columns medium-offset-1 medium-10 large-offset-2 large-8 columns">
@@ -29,12 +31,12 @@
 			{% if project.video %}
 				<div class="global--thumbnail">
 					<video poster="{{ project.video_image.url }}" controls width="100%">
-						<source src="{{ project.video.url }}" type="video/mp4">
+						<source src="{{ project.video.url }}" type="video/mp4" alt="{{ project.video_alt }}">
 					</video>
 				</div>
 			{% elif project.image_detail %}
 				<div class="global--thumbnail">
-					<img src="{{ project.image_detail.url }}">
+					<img src="{{ project.image_detail.url }}" alt="{{ project.image_detail_alt }}">
 				</div>
 			{% endif %}	
 			
@@ -45,7 +47,7 @@
 
 			{% if project.video and project.image_detail %}
 				<div class="global--thumbnail">
-					<img src="{{ project.image_detail.url }}">
+					<img src="{{ project.image_detail.url }}" alt="{{ project.image_detail_alt }}">
 				</div>
 			{% endif %}	
 			
@@ -85,8 +87,7 @@
 	</div> <!-- end row -->
 </section>
 
-	
-
+</main>
 {% include 'partials/footer_bar.html' %}
 
 {% endblock %}

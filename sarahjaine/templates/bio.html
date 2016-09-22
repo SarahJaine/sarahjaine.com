@@ -6,12 +6,14 @@
 {% block content %}
 
 {% include 'partials/header_bar_inner.html' %}
+<main>
+
 <section class="bio section--middle-border">
 	<div class="row">
 		<div class="small-12 columns medium-offset-1 medium-10 columns">
 			<h2 class="h2--alt text--center">About Me</h2>
 			<div class="hide-for-small-only hide-for-medium-only small-12 large-4 columns bio--imgblock">
-				<img src="{% static 'img/justice_nobg.png' %}">
+				<img src="{% static 'img/justice_nobg.png' %}" alt="Lady Justice lifting up her blindfold">
 			</div>
 			<div class="small-12 large-8 columns bio--textblock">
 				<p>I’m a full-stack web developer living in Washington DC. In my free time, I teach beginner friendly Python classes through <a href="http://hearmecode.com/" target="_blank">Hear Me Code</a>. I am actively seeking a full-time permanent position as a web developer. I'm also available for hire for short term projects.</p>
@@ -19,11 +21,13 @@
 				<p>As someone who is the happiest when teaching and learning, I like to be part of communities that value continuous development and improvement. In the next year, I want to create an iOS app, learn more about web security and hacking, and finish another maker project.</p>
 			</div>
 			<div class="show-for-small-only small-offset-2 small-8 bio--imgblock">
-				<img src="{% static 'img/justice_nobg.png' %}">
+				<img src="{% static 'img/justice_nobg.png' %}" alt="Lady Justice lifting up her blindfold">
 			</div>
 		</div>
 	</div>
 </section>
+
+</main>
 {% include 'partials/footer_bar.html' %}
 
 {% endblock %}
