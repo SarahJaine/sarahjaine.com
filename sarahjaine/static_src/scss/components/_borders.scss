@@ -1,0 +1,27 @@
+// Borders
+
+.section--full-border {
+	border: 10px solid $white;
+	padding-bottom: 3rem;
+}
+
+.section--top-border {
+	@extend .section--full-border;
+	border-bottom-width: 5px;
+}
+
+.section--middle-border {
+	@extend .section--full-border;
+	border-top-width: 5px;
+	border-bottom-width: 5px;
+}
+
+.section--bottom-border {
+	@extend .section--full-border;
+	border-top-width: 5px;
+}
+
+.section--no-bottom-border {
+	@extend .section--full-border;
+	border-bottom: 0;
+}

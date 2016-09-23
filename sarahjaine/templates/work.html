@@ -7,10 +7,10 @@
 {% include 'partials/header_bar_inner.html' %}
 <main>
 
-<section class="work section--middle-border">
+<section class="work--page section--middle-border">
 	<div class="row">
 		<div class="small-12 columns medium-offset-1 medium-10 columns">
-			<h2 class="h2--alt text--center">Work</h2>
+			<h1 class="heading--page-fancy text--center">Work</h1>
 			{% for project in project_list %}
 			<div class="row">
 				<div class="small-12 medium-6 columns">
@@ -22,7 +22,7 @@
 				</div>
 				<div class="small-12 medium-6 columns">
 					<div class="global--caption">
-						<h3><a href="{% url 'work_detail' slug=project.slug %}">{{ project.name }}</a></h3>
+						<h2 class="heading--grid"><a href="{% url 'work_detail' slug=project.slug %}">{{ project.name }}</a></h2>
 						<p>{{ project.teaser }}</p>
 					</div>
 				</div>

@@ -2,13 +2,16 @@
 {% load static from staticfiles %}
 
 {% block title %}Home{% endblock title %}
+
 {% block content %}
 
 {% include 'partials/header_bar.html' %}
 
-<section class="hero section--middle-border">
+<main>
+
+<header class="hero section--middle-border">
 	<div class="block--align-center-left">
-		<h1 class="heading--large">
+		<h1 class="heading--hero">
 			<span class="white-highlight">
 				&nbsp;I’m&nbsp;a&nbsp;Python&nbsp;web developer&nbsp;coding&nbsp;and&nbsp;
 				<br>
@@ -18,9 +21,7 @@
 			</span>
 		</h1>
 	</div>
-</section>
-
-<main>
+</header>
 
 {% include 'partials/featured_work.html' %}
 
@@ -30,7 +31,7 @@
 			<img class="contact--headshot-image hide-for-small-only" src="{% static 'img/headshot_nobg.png' %}" alt="professional headshot">
 		</div>
 		<div class="small-12 medium-6 columns contact--textblock">
-			<h2 class="heading--medium">Get In Touch</h2>
+			<h2 class="heading--section">Get In Touch</h2>
 			<p>I’m a full-stack web developer living in Washington DC. In my free time, I teach beginner friendly Python classes through <a href="http://hearmecode.com/" target="_blank">Hear Me Code</a>. I am actively seeking a full-time permanent position as a web developer. I'm also available for hire for short term projects.</p>
 			<ul class="fa-ul">
 				<li><i class="fa-li fa fa-envelope-square fa-lg fa-fw contact--list-item" aria-hidden="true"></i>Send me an <a href="mailto:freelance@sarahjaine.com"target="_blank">email</a>.</li>
@@ -42,4 +43,5 @@
 </section>
 
 </main>
+
 {% endblock %}

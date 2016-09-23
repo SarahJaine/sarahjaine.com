@@ -5,44 +5,41 @@
 	background-position: center center;
 	background-size: cover;
 	position: relative;
+
 	@include breakpoint(small) {
 		min-height: 320px;
         height: 70vh;
     }
+
 	@include breakpoint(large) {
 		min-height: 414px;
         height: 60vh;
     }
 }
 
-// Featured Work Block
+// Featured
 
-.work {
-	background-color: $blush;
-}
-
-.work--video-poster {
-	background-image: url('../img/trckr.png');
-	background-position: center center;
-	background-size: 100% 100%;
+.featured {
+	background-color: $color-background-primary;
 }
 
 // Contact Block
 
 .contact {
-	background-color: $light-blue;
+	background-color: $color-background-secondary;
 	position: relative;
-
 }
 
 .contact--headshot-image {
-	padding: 3rem 0rem 0rem 2rem;
+	padding: 3rem 0 0 2rem;
 	position: absolute;
 	bottom: 0;
 	left: 1%;
+
 	@include breakpoint(medium) {
 		width: 50%;
 	}
+
 	@include breakpoint(large) {
 		width: 43%;
 	}
@@ -51,14 +48,13 @@
 .contact--textblock {
 	padding-left: 2rem;
 	padding-right: 2rem;
+
 	@include breakpoint(large) {
 		padding-right: 8rem;
 	}
-
-} 
+}
 
 .contact--list-item {
 	padding-top: 0.8rem;
 	padding-right: 1rem;
 }
-

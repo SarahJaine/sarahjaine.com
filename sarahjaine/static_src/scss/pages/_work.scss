@@ -1,0 +1,16 @@
+.work--page {
+	background-color: $color-background-primary;
+	min-height: 76vh;
+}
+
+.work--nav-border {
+	border-left: 10px solid $white;
+	border-right: 10px solid $white;
+	border-bottom: 5px solid $white;
+}
+
+.work--video-poster {
+	background-image: url('../img/trckr.png');
+	background-position: center center;
+	background-size: 100% 100%;
+}

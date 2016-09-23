@@ -7,12 +7,12 @@
 {% include 'partials/header_bar_inner.html' %}
 <main>
 
-<section class="work section--no-bottom-border">
+<section class="work--page section--no-bottom-border">
 	<div class="row">
 		<div class="small-12 columns medium-offset-1 medium-10 large-offset-2 large-8 columns">
-			<p class="work-detail--title">{{ happy_chat|random}}&nbsp;{{ project.name }}</p>
+			<h1 class="heading--page-uber-fancy">{{ happy_chat|random}}&nbsp;{{ project.name }}</h1>
 			
-			<p class="work-detail--tag">
+			<p class="work-detail-tag">
 				{% for tag in project.tags.all %}
 					{{ tag }}
 					{% if forloop.last == False %}
@@ -21,10 +21,10 @@
 				{% endfor %}
 			</p>
 
-			<p class="work-detail--teaser">{{ project.teaser }}</p>
+			<p class="work-detail-teaser">{{ project.teaser }}</p>
 			
 			{% if project.subtitle_1 %}
-				<p class="heading--sub">{{ project.subtitle_1 }}</p>
+				<h2 class="heading--sub">{{ project.subtitle_1 }}</h2>
 				<p>{{ project.paragraph_1|linebreaks }}</p>
 			{% endif %}	
 			
@@ -41,7 +41,7 @@
 			{% endif %}	
 			
 			{% if project.subtitle_2 %}
-				<p class="heading--sub">{{ project.subtitle_2 }}</p>
+				<h2 class="heading--sub">{{ project.subtitle_2 }}</h2>
 				<p>{{ project.paragraph_2|linebreaks }}</p>
 			{% endif %}
 
@@ -52,7 +52,7 @@
 			{% endif %}	
 			
 			{% if project.subtitle_3 %}
-				<p class="heading--sub">{{ project.subtitle_3 }}</p>
+				<h2 class="heading--sub">{{ project.subtitle_3 }}</h2>
 				<p>{{ project.paragraph_3|linebreaks }}</p>
 			{% endif %}
 
@@ -70,17 +70,17 @@
 	</div> <!-- end row -->
 </section>
 
-<section class="work work--nav-border">
+<section class="featured work--nav-border">
 <hr class="global--divider">
 	<div class="row">
 		<div class="small-12 columns">
 			<div class="global--centering-parent">
 				{% if previous.slug %}
-					<a class="block--align-left work-detail--nav" href="{% url 'work_detail' slug=previous.slug %}"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;{{ previous.name }}</a>
+					<a class="block--align-left work-detail-nav" href="{% url 'work_detail' slug=previous.slug %}"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;{{ previous.name }}</a>
 				{% endif %}
-				<a class="block--align-center hide-for-small work-detail--nav" href="{% url 'work_list' %}">Work</a>
+				<a class="block--align-center hide-for-small work-detail-nav" href="{% url 'work_list' %}">Work</a>
 				{% if next.slug %}
-					<a class="block--align-right work-detail--nav" href="{% url 'work_detail' slug=next.slug %}">{{ next.name }}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					<a class="block--align-right work-detail-nav" href="{% url 'work_detail' slug=next.slug %}">{{ next.name }}&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 				{% endif %}
 			</div>
 		</div>

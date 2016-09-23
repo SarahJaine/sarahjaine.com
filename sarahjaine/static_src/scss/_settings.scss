@@ -2,10 +2,15 @@
 // ----------------------------------
 // 
 // i. colors
+$blush: #f4ebee;
 $light-blue: #c3e7ef;
 $red: #e9533f;
-$blush: #f4ebee;
-$pink: #E8ACA4;
+$pink: #e8aca4;
+
+$color-accent-primary: $red;
+$color-accent-secondary: $pink;
+$color-background-primary: $blush;
+$color-background-secondary: $light-blue;
 
 // ii. Typography
 $sans: 'Open Sans', sans-serif;
@@ -124,24 +129,24 @@ $header-font-family: $sans;
 $header-font-weight: $font-weight-bold;
 // $header-font-style: normal;
 // $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-sizes: (
-  small: (
-    'h1': 18,
-    'h2': 23,
-    'h3': 22,
-    'h4': 20,
-    'h5': 18,
-    'h6': 16,
-  ),
-  medium: (
-    'h1': 26,
-    'h2': 28,
-    'h3': 18,
-    'h4': 25,
-    'h5': 20,
-    'h6': 16,
-  ),
-);
+// $header-sizes: (
+//   small: (
+//     'h1': 24,
+//     'h2': 20,
+//     'h3': 19,
+//     'h4': 18,
+//     'h5': 17,
+//     'h6': 16,
+//   ),
+//   medium: (
+//     'h1': 48,
+//     'h2': 40,
+//     'h3': 31,
+//     'h4': 25,
+//     'h5': 20,
+//     'h6': 16,
+//   ),
+// );
 $header-color: $body-font-color;
 // $header-lineheight: 1.4;
 // $header-margin-bottom: 0.5rem;
@@ -157,13 +162,13 @@ $header-color: $body-font-color;
 // $code-background: $light-gray;
 // $code-border: 1px solid $medium-gray;
 // $code-padding: rem-calc(2 5 1);
-$anchor-color: $red;
+$anchor-color: $color-accent-primary;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -30%);
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
 $hr-width: 100%;
-$hr-border: 1px solid $pink;
-$hr-margin: 0rem;
+$hr-border: 1px solid $color-accent-secondary;
+$hr-margin: 0;
 $list-lineheight: 3;
 // $list-margin-bottom: $paragraph-margin-bottom;
 // $list-style-type: disc;

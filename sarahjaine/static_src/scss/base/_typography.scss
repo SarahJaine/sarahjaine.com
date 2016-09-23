@@ -1,0 +1,177 @@
+// Typography
+
+// Font Size
+
+.font--size-1 {
+    @include breakpoint(small) {
+        font-size: 1.4rem;
+    }
+
+    @include breakpoint(medium) {
+        font-size: 1.6rem;
+    }
+
+    @include breakpoint(large) {
+        font-size: 1.8rem;
+    }
+}
+
+.font--size-2 {
+    @include breakpoint(small) {
+        font-size: 1.2rem;
+    }
+
+    @include breakpoint(medium) {
+        font-size: 1.4rem;
+    }
+
+    @include breakpoint(large) {
+        font-size: 1.6rem;
+    }
+}
+
+.font--size-3 {
+    @include breakpoint(small) {
+        font-size: 1rem;
+    }
+
+    @include breakpoint(medium) {
+        font-size: 1.1rem;
+    }
+}
+
+
+// Margins
+
+.margin--size-1 {
+     @include breakpoint(small) {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(medium) {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.margin--size-2 {
+     @include breakpoint(small) {
+        margin-top: 2rem;
+    }
+
+    @include breakpoint(medium) {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+// Effects
+
+.text--mini-underline {
+    position: relative;
+    text-align: center;
+    padding-bottom: 0.5rem;
+
+    &::before {
+        border-bottom: 2px solid $color-accent-primary;
+        bottom: 0;
+        content: '';
+        left: 47%;
+        position: absolute;
+        width: 6%;
+    }
+}
+
+.text--center {
+    text-align: center;
+}
+
+.white-highlight {
+    background-color: $white;
+    padding: 5px;
+    margin: 0;
+}
+
+// Headings
+
+.heading--hero {
+    padding: 10px;
+
+    @include breakpoint(small) {
+        font-size: 0.9rem;
+        line-height: 2.4;
+    }
+
+    @include breakpoint(medium) {
+        font-size: 1.3rem;
+        line-height: 2.5;
+    }
+
+    @include breakpoint(large) {
+        font-size: 1.6rem;
+        line-height: 2.3;
+    }
+}
+
+.heading--section {
+    @extend .font--size-2;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+.heading--grid {
+    @extend .font--size-3;
+}
+
+.heading--page-fancy {
+    @extend .font--size-2;
+    @extend .text--mini-underline;
+    @extend .margin--size-1;
+}
+
+.heading--page-uber-fancy {
+    @extend .font--size-1;
+    @extend .text--mini-underline;
+    @extend .margin--size-2;
+    font-family: $serif;
+}
+
+.heading--sub {
+    @extend .font--size-2;
+    font-family: $serif;
+    font-weight: $font-weight-medium;
+    font-style: italic;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: $color-accent-primary;
+}
+
+// Paragraph and links
+
+.work-detail-tag {
+    color: $color-accent-primary;
+    font-family: $sans;
+    font-size: 0.8rem;
+    font-weight: $font-weight-heavy;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.work-detail-teaser {
+    font-size: 1.1rem;
+}
+
+.work-detail-nav {
+    padding: 1rem 0;
+
+    @include breakpoint(small) {
+        font-size: 0.8rem;
+    }
+
+    @include breakpoint(medium) {
+        font-size: 1rem;
+    }
+}

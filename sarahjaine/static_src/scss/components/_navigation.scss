@@ -1,36 +1,42 @@
 // Header Bar
 
 .header--bar {
-	background-color: $light-blue;
+	background-color: $color-background-secondary;
 	height: 3rem;
+
 	a {
 		color: $black;
-		margin: 0.65rem 0.75rem 0.65rem 0.75rem;
-		padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+		margin: 0.65rem 0.75rem;
+		padding: 0.2rem 0.4rem;
 		font-weight: $font-weight-bold;
 		letter-spacing: 0.1rem;
 		font-size: 1rem;
 		border: 1px solid transparent;
-		&:hover, &:active {
+
+		&:hover,
+		&:active {
 			color: $white;
-			background-color: $red;
-			border: 1px solid $red;
+			background-color: $color-accent-primary;
+			border: 1px solid $color-accent-primary;
 			border-radius: 1rem;
 		}
+
 		@include breakpoint(small) {
-			margin: 0.8rem 0.2rem 0.8rem 0.2rem;
-			padding: 0.1rem 0.2rem 0.1rem 0.2rem;
+			margin: 0.8rem 0.2rem;
+			padding: 0.1rem 0.2rem;
 			font-size: 0.7rem;
 			font-weight: $font-weight-medium;
 		}
+
 		@include breakpoint(medium) {
-			margin: 0.65rem 0.75rem 0.65rem 0.75rem;
-			padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+			margin: 0.65rem 0.75rem;
+			padding: 0.2rem 0.4rem;
 			font-size: 1rem;
 		}
+
 		@include breakpoint(large) {
-			margin: 0.65rem 0.75rem 0.65rem 0.75rem;
-			padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+			margin: 0.65rem 0.75rem;
+			padding: 0.2rem 0.4rem;
 			font-size: 1rem;
 		}
 	}
@@ -41,6 +47,7 @@
 	background-image: url('../img/floral_bg.png');
 	background-position: center center;
 	background-size: cover;
+
 	a {
 		background-color: $white;
 	}
@@ -50,15 +57,21 @@
 
 .footer--bar-inner {
 	@extend .header--bar;
+
 	a {
 		border: initial;
-		&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
-			margin-left: 0rem;
-			margin-right: 0rem;
+
+		&:nth-of-type(2),
+		&:nth-of-type(3),
+		&:nth-of-type(4) {
+			margin-left: 0;
+			margin-right: 0;
 			font-size: 1rem;
 		}
-		&:hover, &:active {
-			color: $red;
+
+		&:hover,
+		&:active {
+			color: $color-accent-primary;
 			background-color: initial;
 			border: initial;
 		}

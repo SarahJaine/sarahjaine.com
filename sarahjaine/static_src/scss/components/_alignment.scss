@@ -1,0 +1,71 @@
+// Alignment
+
+.block--align-center-left {
+	position: absolute;
+
+	@include breakpoint(small) {
+		top: 10%;
+		right: 5%;
+		bottom: 10%;
+		left: 5%;
+    }
+
+    @include breakpoint(medium) {
+    	top: 17%;
+    	right: 10%;
+		bottom: 20%;
+		left: 10%;
+    }
+
+    @include breakpoint(large) {
+		top: 27%;
+		right: 18%;
+		bottom: 27%;
+		left: 18%;
+    }
+}
+
+.block--align-left {
+	float: left;
+}
+
+.block--align-right {
+	float: right;
+}
+
+.block--align-center {
+	position: absolute;
+	width: 20%;
+	left: 40%;
+}
+
+.global--centering-parent {
+	text-align: center;
+}
+
+.global--centering-child {
+	display: inline-block;
+}
+
+// Visibility
+
+.hide-for-small {
+	@include breakpoint(small) {
+		display: none;
+	}
+
+	@include breakpoint(medium) {
+		display: inline;
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}

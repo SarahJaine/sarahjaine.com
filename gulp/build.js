@@ -4,7 +4,7 @@ import del from 'del'
 import autoprefixer from 'autoprefixer'
 import postcss from 'gulp-postcss'
 import sass from 'gulp-sass'
-// import stylelint from 'gulp-stylelint'
+import stylelint from 'gulp-stylelint'
 import sourcemaps from 'gulp-sourcemaps'
 import source from 'vinyl-source-stream'
 import buffer from 'vinyl-buffer'
@@ -14,7 +14,7 @@ import plumber from 'gulp-plumber'
 export const EXTRAS_GLOB = './sarahjaine/static_src/**/*.{txt,json,xml,ico,jpeg,jpg,png,gif,svg,ttf,otf,eot,woff,woff2}'
 
 let bundler = browserify(['./sarahjaine/static_src/js/app.js'], { debug: true })
-  // .transform('eslintify', { continuous: true })
+  .transform('eslintify', { continuous: true })
   .transform('babelify')
   .transform('uglifyify')
 
@@ -49,14 +49,14 @@ gulp.task('watchify', () => {
 gulp.task('sass', () =>
   gulp.src('./sarahjaine/static_src/scss/**/*.scss')
     .pipe(plumber())
-    // .pipe(stylelint({
-    //   syntax: 'scss',
-    //   reporters: [{
-    //     formatter: 'string',
-    //     console: true,
-    //   }],
-    //   failAfterError: false,
-    // }))
+    .pipe(stylelint({
+      syntax: 'scss',
+      reporters: [{
+        formatter: 'string',
+        console: true,
+      }],
+      failAfterError: false,
+    }))
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['node_modules/foundation-sites/scss'],
