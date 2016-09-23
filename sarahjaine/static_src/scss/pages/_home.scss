@@ -8,7 +8,12 @@
 
 	@include breakpoint(small) {
 		min-height: 320px;
-        height: 70vh;
+        height: 50vh;
+    }
+
+    @include breakpoint(medium) {
+		min-height: 370px;
+        height: 50vh;
     }
 
 	@include breakpoint(large) {

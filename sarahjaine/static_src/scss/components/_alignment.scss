@@ -4,23 +4,25 @@
 	position: absolute;
 
 	@include breakpoint(small) {
-		top: 10%;
-		right: 5%;
-		bottom: 10%;
-		left: 5%;
+		top: 15%;
+		right: 1%;
+		left: 1%;
+    }
+
+    @include breakpoint(phone) {
+    	right: 3%;
+		left: 3%;
     }
 
     @include breakpoint(medium) {
-    	top: 17%;
+    	top: 20%;
     	right: 10%;
-		bottom: 20%;
 		left: 10%;
     }
 
     @include breakpoint(large) {
 		top: 27%;
 		right: 18%;
-		bottom: 27%;
 		left: 18%;
     }
 }
