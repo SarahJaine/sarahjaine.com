@@ -51,12 +51,22 @@
 
 // Visibility
 
-.hide-for-small {
+.display-small-phone {
+	@include breakpoint(small) {
+		display: inline;
+	}
+
+	@include breakpoint(medium) {
+		display: none;
+	}
+}
+
+.display-large {
 	@include breakpoint(small) {
 		display: none;
 	}
 
-	@include breakpoint(medium) {
+	@include breakpoint(large) {
 		display: inline;
 	}
 }

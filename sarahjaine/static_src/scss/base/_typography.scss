@@ -50,6 +50,11 @@
     }
 
     @include breakpoint(medium) {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    @include breakpoint(medium) {
         margin-top: 4rem;
         margin-bottom: 2rem;
     }
@@ -58,6 +63,11 @@
 .margin--size-2 {
      @include breakpoint(small) {
         margin-top: 2rem;
+    }
+
+    @include breakpoint(medium) {
+        margin-top: 3rem;
+        margin-bottom: 0.5rem;
     }
 
     @include breakpoint(medium) {
