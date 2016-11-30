@@ -131,7 +131,7 @@ if config('USE_S3', cast=bool, default=True):
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
     AWS_QUERYSTRING_AUTH = False
     AWS_HEADERS = {
-        'Cache-Control': 'max-age=86400',
+        'Cache-Control': 'max-age=604800',
     }
 
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
