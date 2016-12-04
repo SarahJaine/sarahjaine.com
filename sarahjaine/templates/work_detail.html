@@ -27,8 +27,13 @@
 				<h2 class="heading--sub">{{ project.subtitle_1 }}</h2>
 				<p>{{ project.paragraph_1|linebreaks }}</p>
 			{% endif %}	
-			
-			{% if project.video %}
+
+			{% if project.name == "ISL Fun Fund" and project.video %}
+				<div class="global--thumbnail">
+					<span class="amara-embed" data-show-subtitles-default="true" data-width="740px" data-height="400px" data-resizable="true" data-url="http://vimeo.com/181975388" alt="{{ project.video_alt }}">
+					</span>
+				</div>
+			{% elif project.video %}
 				<div class="global--thumbnail">
 					<video poster="{{ project.video_image.url }}" controls width="100%">
 						<source src="{{ project.video.url }}" type="video/mp4" alt="{{ project.video_alt }}">
@@ -90,4 +95,6 @@
 </main>
 {% include 'partials/footer_bar.html' %}
 
+<script type="text/javascript" src='https://amara.org/embedder-iframe'>
+</script>
 {% endblock %}
